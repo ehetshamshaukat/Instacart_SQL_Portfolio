@@ -2,6 +2,6 @@
 # SQL flavor 
 PostgreSQL
 # Tool
-datagrip
+Datagrip
 # About dataset
-record of 3.2 million rows of 200k users
+Record of 3.2 million rows of 200k users
