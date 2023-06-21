@@ -1,7 +1,7 @@
-# instacart
-# sql flavor 
+# Instacart
+# SQL flavor 
 PostgreSQL
-# tool
+# Tool
 datagrip
-# about dataset
+# About dataset
 record of 3.2 million rows of 200k users
