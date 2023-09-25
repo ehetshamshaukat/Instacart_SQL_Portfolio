@@ -1,4 +1,5 @@
 # selecting tables
+
 select * from aisles;
 select * from departments;
 select * from order_product_prior;
@@ -33,7 +34,13 @@ group by user_id;
 
 select order_dow , count(order_id) as total_order
 from orders
-group by order_dow
+group by order_dow;
+
+# order made on each hour
+
+select order_hour_of_day,count(order_hour_of_day) as order_on_each_hour
+from orders
+group by order_hour_of_day;
 
 # how many aisles in each department
 
@@ -49,6 +56,7 @@ where reordered = 1
 group by product_id
 order by most_reorderd_products desc;
 
+# most reorder product with alway first on add_to_cart in each department
 select product_name , count(reordered) as most_reorderd_product_with_first_add_to_cart
 from order_product_prior
 inner join products
@@ -69,4 +77,5 @@ select aisle ,count(product_name) as number_of_product_in_each_aisle
 from products
 inner join aisles
 using (aisle_id)
-group by aisle;
+group by aisle
+order by 1;
